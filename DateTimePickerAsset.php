@@ -26,6 +26,6 @@ class DateTimePickerAsset extends AssetBundle
     public function init()
     {
         $this->css[] = YII_DEBUG ? 'css/bootstrap-datetimepicker.css' : 'css/bootstrap-datetimepicker.min.css';
-        $this->js[] = YII_DEBUG ? 'js/bootstrap-datetimepicker.js' : 'css/bootstrap-datetimepicker.min.js';
+        $this->js[] = YII_DEBUG ? 'js/bootstrap-datetimepicker.js' : 'js/bootstrap-datetimepicker.min.js';
     }
 } 
