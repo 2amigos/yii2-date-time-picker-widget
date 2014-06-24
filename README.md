@@ -1,6 +1,8 @@
 Bootstrap DateTimePicker Widget for Yii2
 ========================================
 
+[![Latest Stable Version](https://poser.pugx.org/2amigos/yii2-date-time-picker-widget/v/stable.svg)](https://packagist.org/packages/2amigos/yii2-date-time-picker-widget) [![Total Downloads](https://poser.pugx.org/2amigos/yii2-date-time-picker-widget/downloads.svg)](https://packagist.org/packages/2amigos/yii2-date-time-picker-widget) [![Latest Unstable Version](https://poser.pugx.org/2amigos/yii2-date-time-picker-widget/v/unstable.svg)](https://packagist.org/packages/2amigos/yii2-date-time-picker-widget) [![License](https://poser.pugx.org/2amigos/yii2-date-time-picker-widget/license.svg)](https://packagist.org/packages/2amigos/yii2-date-time-picker-widget)
+
 Renders a [Bootstrap DateTimePicker plugin](http://www.malot.fr/bootstrap-datetimepicker/).
 
 Installation
