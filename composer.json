@@ -1,7 +1,12 @@
 {
     "name": "2amigos/yii2-date-time-picker-widget",
     "description": "Bootstrap DateTimePicker widget for Yii2.",
-    "keywords": ["yii", "extension", "widget", "datepicker"],
+    "keywords": [
+        "yii",
+        "extension",
+        "widget",
+        "datepicker"
+    ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
@@ -9,14 +14,39 @@
             "name": "Antonio Ramirez",
             "email": "ramirez.cobos@gmail.com",
             "homepage": "http://2amigos.us"
+        },
+        {
+            "name": "2amigOS! Consulting Group",
+            "email": "hola@2amigos.us",
+            "homepage": "http://2amigos.us",
+            "role": "Developer"
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "bower-asset/smalot-bootstrap-datetimepicker": "2.3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
     },
     "autoload": {
         "psr-4": {
-            "dosamigos\\datetimepicker\\": ""
+            "dosamigos\\datetimepicker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "dosamigos\\datetimepicker\\tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
         }
     }
 }
