@@ -2,7 +2,9 @@
 namespace tests\data\overrides;
 
 use dosamigos\datetimepicker\DateTimePicker;
+use dosamigos\datetimepicker\DateTimePickerAsset;
 use yii\helpers\Json;
+use yii\web\View;
 
 class TestDateTimePicker extends DateTimePicker
 {
@@ -15,11 +17,11 @@ class TestDateTimePicker extends DateTimePicker
 
         if ($this->language !== null) {
             $this->clientOptions['language'] = $this->language;
-            TestDateTimePickerAsset::register(
+            DateTimePickerAsset::register(
                 $view
             )->js[] = 'js/locales/bootstrap-datetimepicker.' . $this->language . '.js';
         } else {
-            TestDateTimePickerAsset::register($view);
+            DateTimePickerAsset::register($view);
         }
 
         $id = $this->options['id'];
@@ -43,6 +45,6 @@ class TestDateTimePicker extends DateTimePicker
                 $js[] = "$selector.on('$event', $handler);";
             }
         }
-        $view->registerJs(implode("\n", $js));
+        $view->registerJs(implode("\n", $js), View::POS_READY, 'test-datetimepicker-js');
     }
 }

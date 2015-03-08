@@ -124,8 +124,10 @@ class DateTimePicker extends InputWidget
      */
     public function registerClientScript()
     {
+        $js = [];
         $view = $this->getView();
 
+        // @codeCoverageIgnoreStart
         if ($this->language !== null) {
             $this->clientOptions['language'] = $this->language;
             DateTimePickerAsset::register(
@@ -134,6 +136,7 @@ class DateTimePicker extends InputWidget
         } else {
             DateTimePickerAsset::register($view);
         }
+        // @codeCoverageIgnoreEnd
 
         $id = $this->options['id'];
         $selector = ";jQuery('#$id')";
@@ -151,11 +154,14 @@ class DateTimePicker extends InputWidget
             $js[] = "$selector.find('table.table-condensed').attr('align','center').css('margin','auto');";
         }
 
+        // @codeCoverageIgnoreStart
         if (!empty($this->clientEvents)) {
             foreach ($this->clientEvents as $event => $handler) {
                 $js[] = "$selector.on('$event', $handler);";
             }
         }
+        // @codeCoverageIgnoreEnd
+
         $view->registerJs(implode("\n", $js));
     }
-} 
+}
