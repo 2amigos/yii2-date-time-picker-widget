@@ -7,7 +7,7 @@ use yii\web\AssetManager;
 use yii\web\View;
 
 /**
- * This is the base class for all yii framework unit tests.
+ * This is the base class for all tests
  */
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
