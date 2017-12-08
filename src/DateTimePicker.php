@@ -94,6 +94,9 @@ class DateTimePicker extends InputWidget
      */
     public function run()
     {
+        if($this->hasModel()){
+            $this->model->{$this->attribute} = \Yii::$app->formatter->asDatetime($this->model->{$this->attribute});
+        }
 
         $input = $this->hasModel()
             ? Html::activeTextInput($this->model, $this->attribute, $this->options)
