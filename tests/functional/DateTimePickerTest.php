@@ -20,7 +20,7 @@ class DateTimePickerTest extends TestCase
             'model' => $model,
             'attribute' => 'create_time'
         ]);
-        $expected = '<div class="input-group date"><input type="text" id="post-create_time" class="form-control" name="Post[create_time]" value="1425807308" readonly="readonly"><span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span><span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span></div>';
+        $expected = '<div class="input-group date"><input type="text" id="post-create_time" class="form-control" name="Post[create_time]" value="Mar 8, 2015 9:35:08 AM" readonly="readonly"><span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span><span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span></div>';
 
         $this->assertEqualsWithoutLE($expected, $out);
     }
