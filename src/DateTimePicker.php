@@ -128,15 +128,11 @@ class DateTimePicker extends InputWidget
         $view = $this->getView();
 
         // @codeCoverageIgnoreStart
-        if ($this->language !== null) {
-            $this->clientOptions['language'] = $this->language;
-            DateTimePickerAsset::register(
-                $view
-            )->js[] = 'js/locales/bootstrap-datetimepicker.' . $this->language . '.js';
-        } else {
-            $this->clientOptions['language'] = Yii::$app->language;
-            DateTimePickerAsset::register($view);
-        }
+        $this->language = $this->language !== null ? $this->language : \Yii::$app->language;
+        $this->clientOptions['language'] = $this->language;
+        DateTimePickerAsset::register(
+            $view
+        )->js[] = 'js/locales/bootstrap-datetimepicker.' . $this->language . '.js';
         // @codeCoverageIgnoreEnd
 
         $id = $this->options['id'];
