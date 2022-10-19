@@ -28,6 +28,6 @@ class DateTimePickerAsset extends AssetBundle
     ];
 
     public $depends = [
-        'yii\bootstrap\BootstrapPluginAsset'
+        //'yii\bootstrap\BootstrapPluginAsset'
     ];
 }
